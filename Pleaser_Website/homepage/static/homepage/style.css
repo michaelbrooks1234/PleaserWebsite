@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    max-width: 100vw;
+    height: auto;
+    background-color: black;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+#nav1{
+    list-style-type: none;
+}
+
+#icons {
+    list-style: none;
+    position: absolute;
+    top: 12vh;
+    width: 100%;
+}
+
+#icons li {
+    display: inline;
+}
+
+.icon {
+    height: 1.5vh;
+    width: 1.5vh;
+    margin-top: 0.6vh;
+    margin-right: .6vw;
+}
+
+#pleaser1{
+    font-size: 1.5vh;
+    cursor: default;
+}
+
+#shows1{
+    font-size: 1vh;
+    cursor: pointer;
+}
+
+#merch1{
+    font-size: 1vh;
+    cursor: pointer;
+}
+
+#bio1 {
+    font-size: 1vh;
+    cursor: pointer;
+}
+
+#nav1 li{
+    font-family: 'Lato', sans-serif;
+    color: white;
+    margin-bottom: .5vh;
+}
+
+#nav1container {
+    position: absolute;
+    left: 5vw;
+    top: 10vh;
+}
+
+
+#image {
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+}
+
+#image2 {
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+}
+
+#imageholder {
+    z-index: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+#arrow {
+    cursor: pointer;
+    user-select: all;
+    display: block;
+    justify-self: center;
+    z-index: 10;
+    margin: auto;
+    height: 25px;
+    width: 50px;
+}
+
+#arrowdiv{
+    z-index: 9;
+    position: absolute;
+    bottom: 1vh;
+    width: 100vw;
+    height: auto;
+}
+
+#nav2container {
+    position: sticky;
+    position: -webkit-sticky;
+    height: 40px;
+    width: 100vw;
+    top:0;
+    background-color: white;
+    box-shadow: 0px 3px 5px black;
+    z-index: 12;
+}
+
+#nav2 {
+    position: absolute;
+    right: 3vw;
+}
+
+#nav2 li{
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    color: black;
+    font-size: 8px;
+    font-weight: bolder;
+    margin-top: 9px;
+    margin-right: 1vw;
+}
+
+#pleaserbox {
+    position: absolute;
+    left: 3vw;
+}
+
+#pleaser2 {
+    font-family: 'Lato', sans-serif;
+    color: black;
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 7px;
+    cursor: pointer;
+}
+
+
+#imageholder2 {
+    position: absolute;
+    z-index: 0;
+    height: 100vh;
+    width: 100vw;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+}
+
+#biotitle {
+    position: absolute;
+    width: 100vw;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-size: 3vh;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 5vh;
+    z-index: 1;
+}
+
+#merchsection {
+    height: 100vh;
+    width: 100vw;
+}
+
+#biocontentholder {
+    position: absolute;
+    z-index: 1;
+    width: auto;
+    height: auto;
+    margin-top: 70vh;
+    left: 10vw;
+    right: 10vw;
+}
+
+#biocontent {
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-size: 2.5vh;
+    text-align: center;
+}
+
+#merchsection {
+    width: 100%;
+    height: fit-content;;
+}
+
+#merchtitleholder {
+    position: absolute;
+    height: auto;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20vh;
+    padding-bottom: 4vh;
+}
+#merchtitle {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-size: 50px;
+    margin-top: 40vh;
+}
+
+#merchstuffholder {
+    position: relative;
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5vh;
+    height: fit-content;
+    text-align: center;
+}
+
+#merchstuffholder ul li div{
+    height: fit-content;
+    width: auto;
+    position: relative;
+    display: block;
+}
+
+#merchstuffholder ul li{
+    height: fit-content;
+    width: auto;
+    display: inline-block;
+    justify-self: center;
+    margin: auto;
+}
+
+#merchstuffholder div img{
+    display: block;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    height: 40vh;
+    width: 40vh;
+    box-shadow: -3px 5px 0px #696969;
+}
+
+.shoplink {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-size: 10px;
+}
+
+.button:hover {
+    background-color: darkgrey;
+}
+
+#showsholder {
+    margin-top: 20vh;
+    width: 100vw;
+    height: auto;
+}
+
+#showstitleholder {
+    margin-top: 1px;
+    width: 80%;
+    margin-left: 10%;
+    height: auto;
+    text-align: center;
+    border-bottom: 3px solid white;
+}
+
+#showstitle {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    margin-bottom: 8vh;
+    font-size: 50px;
+}
+
+#showinfoholder {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    height: 60vh;
+}
+
+#showinfoholder li h1{
+    display: inline-block;
+}
+
+#showinfoholder li{
+    display: block;
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+    width: 80%;
+    margin-left: 10%;
+    border-bottom: 3px solid white;
+}
+
+.showinfo {
+    position: absolute;
+    margin-top: -3vh;
+    margin-bottom: 1px;
+}
+
+.showinfo2 {
+    position: absolute;
+    margin-top: -3vh;
+    margin-bottom: 1px;
+    right: 10%;
+}
+
+#footer {
+    width: 100%;
+    height: 100px;
+    background-color: #373737;
+    border-top: 2px solid #1f1f1f;
+}
+
+#infoholder {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px
+}
+
+#info {
+    color: darkgrey;
+    font-family: 'Lato', sans-serif;
+}
+
+@keyframes bounce{
+    100%{
+        transform: translateY(-100%);
+    }
+    0%{
+        transform: translateY(0%); 
+    }
+}
+
+@keyframes unbounce{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%); 
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #image {
+        margin-left: 0;
+        box-sizing: content-box;
+        height: 100vh;
+        width: auto;
+    }
+    #image2 {
+        margin-left: 0;
+        box-sizing: content-box;
+        height: 100vh;
+        width: auto;
+    }
+    #biocontent {
+        font-size: 2vh;
+    }
+    #biocontentholder {
+        margin-top: 40vh;
+    }
+    #merchstuffholder img{
+        height: 25vh;
+        width: 25vh;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #image {
+        margin-left: -75%;
+        box-sizing: content-box;
+        height: 100vh;
+        width: auto;
+    }
+    #image2 {
+        margin-left: -75%;
+        box-sizing: content-box;
+        height: 100vh;
+        width: auto;
+    }
+    #biocontent {
+        font-size: 2vh;
+    }
+    #biocontentholder {
+        margin-top: 40vh;
+    }
+    #merchstuffholder img{
+        height: 25vh;
+        width: 25vh;
+    }
+    #showinfoholder {
+        font-size: 9px;
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href={% static "homepage/icon.png" %}/>
+  <link rel="stylesheet" href={% static "homepage/style.css" %} {% now "U" %}>
+  <title>Pleaser</title>
+</head>
+<body>
+  <div id="nav1container">
+    <ul id="icons">
+      <li><a href="https://music.apple.com/us/album/feel-the-same-single/1578379490?uo=4&app=music" target="_blank"><img src={% static "homepage/apple.png" %} class="icon"></a></li>
+      <li><a href="https://www.deezer.com/album/247348952" target="_blank"><img src={% static "homepage/deezer.png" %} class="icon"></a></li>
+      <li><a href="https://youtube.com/channel/UCKnWMiygilZETe4PD0rmHdg" target="_blank"><img src={% static "homepage/youtube.png" %} class="icon"></a></li>
+      <li><a href="https://open.spotify.com/album/7d3pW5UgYBWgfNZrK8lewp" target="_blank"><img src={% static "homepage/spotify.png" %} class="icon"></a></li>
+    </ul>
+    <ul id="nav1">
+      <li id="pleaser1"><h1>PLEASER</h1></li>
+      <li id="bio1" onClick="scrollingtobio()"><h1>BIO</h1></li>
+      <li id="merch1" onClick="scrollingtomerch()"><h1>MERCH</h1></li>
+      <li id="shows1" onClick="scrollingtoshows()"><h1>SHOWS</h1></li>
+    </ul>
+  </div>
+  <div id="arrowdiv">
+    <img src={% static "homepage/arrow.png" %} alt ="" id="arrow" onClick="scrollingtobio()"/>
+  </div>
+  <div id="imageholder">
+    <img src={% static "homepage/pweaser5.jpg" %} id="image">
+  </div>
+  <div id="nav2container">
+    <div id="pleaserbox">
+      <h1 id="pleaser2" onClick="scrollingtohome()">PLEASER</h1>
+    </div>
+    <ul id="nav2">
+      <li id="bio2" onClick="scrollingtobio()"><h1>BIO</h1></li> 
+      <li id="merch2" onClick="scrollingtomerch()"><h1>MERCH</h1></li>
+      <li id="shows2" onClick="scrollingtoshows()"><h1>SHOWS</h1></li>
+    </ul>
+  </div>
+  <div id="imageholder">
+    <div id="biotitle">
+      <h1>BIO</h1>
+    </div>
+    <div id="biocontentholder">
+      <p id="biocontent">Founded in 2019, Pleaser is a four-piece band formed by Collin Bennett - vocals/rhythm guitar, Kyle Eger - lead guitar, Aidan Post - bass, Corbin Wright - drums.
+        With influences ranging from The Strokes to Gorillaz to Thin Lizzy, they can be counted on for solid melody, great harmonies, and riffs that stick in your head for days.
+        In October of 2020, the band enlisted the expertise of producer Cole Clark to record their first, five song EP, entitled, “Why Aren’t You Any Fun?” released in March of 2021, distributed by SonaBlast Records.
+        “We were really happy with what happened in the studio for this project. I feel like we captured the spectrum of sound we were hoping for. The range of material, from really poppy to pretty dead-on rock, represents us well. We’re influenced by a lot of classic rock bands but keep an ear on what’s current.” says Collin.
+        The band continues to write new material and is currently working on their next release.</p>
+    </div>
+    <div id="imageholder2"></div>
+    <img src={% static "homepage/pweaser2.jpg" %} id="image2">
+  </div>
+  <div id="merchsection">
+    <div id="merchtitleholder">
+    </div>
+    <h1 id="merchtitle">MERCH</h1>
+    <div id="merchstuffholder">
+      <ul>
+        <li><div><a href="#"><img src={% static "homepage/pweaser3.jpg" %}>
+          <a class="shoplink" href="#"><h1>SHOP</h1></a>
+        </a></div></li>
+        <li><div><a href="#"><img src={% static "homepage/pweaser6.jpg" %}>
+          <a class="shoplink" href="#"><h1>SHOP</h1></a>
+        </a></div></li>
+      </ul>
+    </div>
+  </div>
+  <div id="showsholder">
+    <div id="showstitleholder">
+      <h1 id="showstitle">SHOWS</h1>
+    </div>
+    <div>
+      
+          <ul id="showinfoholder">
+            {% block content %}
+              {% for Show in shows %}
+            <li>
+              <h1 class="showinfo">{{ Show.location }}, {{ Show.date }}</h1><h1 class="showinfo2">{{ Show.venue }}</h1>
+            </li>
+              {% endfor %}
+            {% endblock content %}
+          </ul>
+    </div>
+  </div>
+  <script src={% static "homepage/Index.js" %}></script>
+</body>
+</html>
